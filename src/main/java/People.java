@@ -4,8 +4,15 @@ import java.util.List;
 
 public class People <E extends Person> implements Iterable<E> {
 
-private List<E> personList = new ArrayList<E>();
+ private List<E> personList = new ArrayList<E>();
 
+    public List<E> getPersonList() {
+        return personList;
+    }
+
+    public void setPersonList(List<E> personList) {
+        this.personList = personList;
+    }
 // //   public List<E> getPersonList() {
 //        return personList;
 //    }

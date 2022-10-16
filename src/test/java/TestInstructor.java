@@ -44,6 +44,7 @@ public class TestInstructor {
         Student student = new Student(59696L, "Ryan");
         Student student2 = new Student(69704L, "John");
 
+
         Student[] students = {student, student2};
         instructor.lecture(students, 12);
         Double expected = 6.0;
