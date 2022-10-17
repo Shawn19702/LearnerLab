@@ -2,6 +2,9 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class TestPeople {
 
 
@@ -40,14 +43,19 @@ Person person = new Person(53364L, "Shawn");
     @Test
     public void testFindId(){
 
-        long expected = 53364L;
+        People people = new People();
 
+        List<Person> personList = new ArrayList<>();
 
-        Person person = new Person(53364L, "Shawn");
+        personList.add(new Person(235257L, "Shawn"));
 
-person.getId();
+        people.setPersonList(personList);
 
-        Assertions.assertEquals(expected, person.getId());
+        Person expected = personList.get(0);
+
+        Person actual = people.findPersonById(235257L);
+
+        Assertions.assertEquals(expected, actual);
 
     }
 
